@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<!-- <div class="container-fluid">
     <div class="row">
         <h2>Realtime Chat Application</h2>
         <hr>
@@ -7,9 +7,9 @@
         <div class="col-sm-5">
             <div class="form-group">
                 <label for="username">Username</label>
-                <input type="text" [(ngModel)]="user" class="form-control" id="username" placeholder="Enter username">
+                <input type="text" [(ngModel)]="user" class="form-control" id="username" placeholder="Enter username"> -->
                 <!-- <small id="userHelp" class="form-text text-muted">Type your username.</small> -->
-            </div>
+            <!-- </div>
         </div>
         <div class="col-sm-5">
             <label for="roomInput">Choose room</label>
@@ -44,4 +44,55 @@
     </div>
 </div>
 
-<angular-file-uploader [config]="afuConfig3" [resetUpload]=resetUpload3 (ApiResponse)="docUpload($event)"></angular-file-uploader>
+<angular-file-uploader [config]="afuConfig3" [resetUpload]=resetUpload3 (ApiResponse)="docUpload($event)"></angular-file-uploader> -->
+
+
+<!-- <div>
+    <input type="file" name="Choose File" [(ngModel)]="chatapp.fileName">
+    <button type="button" (click)="onUpload()">Upload</button>
+</div>
+
+<div>
+    <div *ngFor="let chat of chatInfoList">
+        <img src="{{chat.fileImg}}">
+        <p>{{chat.fileName}}</p>
+    </div>
+</div> -->
+
+<!-- Medium code -->
+
+<div class="container row">
+    <div class="col-md-12">
+        <h1>Upload Image</h1>
+    </div>
+</div>
+<div class="container row">
+    <div class="col-md-6">
+        <input type="file" (change)="onFileChanged($event)">
+    </div>
+    <div class="col-md-6">
+        <input type="button" (click)="onupload()" value="upload">
+    </div>
+</div>
+<hr />
+<div class="container row">
+    <div class="col-md-12">
+        <div *ngIf=message>{{message}}</div>
+    </div>
+</div>
+<div class="container row">
+    <div class="col-md-6">
+        <input type="text" class="form-control" id="name" placeholder="image name" [(ngModel)]="imageName"
+            name="name" />
+    </div>
+    <div class="col-md-6">
+        <input type="button" (click)="getImage()" value="Get Image">
+    </div>
+</div>
+<div class="container row">
+    <div class="col-md-12">
+        <div *ngIf=retrievedImage>
+            <img [src]="retrievedImage">
+        </div>
+    </div>
+</div>

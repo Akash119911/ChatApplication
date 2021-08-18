@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
@@ -17,6 +18,7 @@ import { ChatInboxComponent } from './chat-inbox/chat-inbox.component';
     BrowserModule,
     FormsModule,
     AngularFileUploaderModule,
+    HttpClientModule,
     AppRoutingModule
   ],
   providers: [],
