@@ -1,8 +1,8 @@
 module.exports = {
     host : 'localhost',
     user : 'root',
-    password : 'akash',
-    db : 'food_paradise_management_system',
+    password : 'akninja',
+    db : 'peer_review',
     dialect : 'mysql',
     pool : {
         max : 5,

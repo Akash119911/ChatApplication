@@ -7,12 +7,14 @@ import { AngularFileUploaderModule } from 'angular-file-uploader';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ChatInboxComponent } from './chat-inbox/chat-inbox.component';
+import { FileUploadComponent } from './file-upload/file-upload.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    ChatInboxComponent
+    ChatInboxComponent,
+    FileUploadComponent
   ],
   imports: [
     BrowserModule,

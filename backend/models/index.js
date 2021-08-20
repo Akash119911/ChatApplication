@@ -8,6 +8,7 @@ const sequelizeConnect = new Sequelize(
     {
         host: dbConfig.host,
         dialect: dbConfig.dialect,
+        operatorsAliases: false,
         pool : {
             max : dbConfig.pool.max,
             min : dbConfig.pool.min,
@@ -26,6 +27,6 @@ const db = {};
 db.sequelizeConnect = sequelizeConnect;
 db.Sequelize = Sequelize;
 
-db.chatapp = require('./chatapp.models.js')(sequelizeConnect, Sequelize);
+db.uploadImage = require('./upload_image.models.js')(sequelizeConnect, Sequelize);
 
 module.exports = db;
